@@ -1,0 +1,178 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body, input {
+  font-family: 'Mulish', sans-serif;
+}
+
+:root {
+  font-size: 62.5%;
+  font-family: 'Mulish', sans-serif;
+}
+
+body {
+  font-size: 1.6rem;
+  color: #202024;
+}
+
+.app {
+  display: grid;
+  grid-template-rows: max-content 1fr max-content;
+  height: 100vh;
+}
+
+.container {
+  padding: 1.6rem 3.2rem;
+  width: min(112rem, 100%);
+  margin: 0 auto;
+}
+
+main {
+  background-color: #f5f5f5;
+  overflow-y: scroll;
+}
+
+header {
+  --startY: -100%;
+  animation: move .4s;
+}
+
+header, nav, nav ul {
+  display: flex;
+  align-items: center;
+  gap: 7.2rem;
+  font-weight: 700;
+  background-color: #FFF;
+}
+
+header form {
+  flex: 1;
+}
+
+nav ul {
+  list-style: none;
+  font-size: 1.8rem;
+  color: #8d8d99;
+}
+
+ul li.active {
+  color: #202024;
+}
+
+.input-wrapper label {
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+}
+
+.input-wrapper input {
+  width: 100%;
+  padding: 1.6rem;
+  background-color: #EEE;
+  border: 0;
+  border-radius: 1.6rem;
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+
+.input-wrapper input::placeholder {
+  opacity: 0.56;
+  color: #3D3D3D;
+}
+
+.avatar {
+  width: 4.2rem;
+  height: 4.2rem;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+main h1 {
+  font-size: 2.4rem;
+  padding-top: 1.6rem;
+}
+
+.gallery {
+  margin-top: 3.2rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.2rem;
+}
+
+.item {
+  background-color: #FFF;
+  border-radius: .8rem;
+  overflow: hidden;
+  --delay: .4s;
+  animation: appear .4s var(--delay) backwards;
+}
+
+.item img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16/9;
+  object-fit: cover;
+  transition-property: all;
+  transition-duration: 300ms;
+  transition-delay: 0s;
+  transition-timing-function: ease-out;
+}
+
+.item img:hover {
+  filter: hue-rotate(7deg) contrast(101%) saturate(200%);
+  transform: scale(1.1) rotate(-2deg);
+}
+
+.details {
+  padding: 2.2rem;
+  background-color: white;
+  z-index: 1;
+  position: relative;
+}
+
+.details h2 {
+  font-size: 1.8rem;
+}
+
+.tags {
+  margin-top: 1.2rem;
+}
+
+.tags span {
+  padding: .6rem;
+  background-color: #F5F5F5;
+  border-radius: .4rem;
+  line-height: 0;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+}
+
+footer {
+  text-align: center;
+  padding: 1.6rem;
+  font-weight: 600;
+
+  --startY: 100%;
+  animation: move .4s;
+}
+
+@keyframes move {
+  from {
+    transform: translateY(var(--startY))
+  }
+}
+
+@keyframes appear {
+  0% {
+    opacity: 0%;
+    transform: scale(0.7);
+  }
+
+  50% {
+    transform: scale(1.2);
+  }
+}
