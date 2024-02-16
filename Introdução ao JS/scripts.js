@@ -76,3 +76,16 @@ myPet(
     console.log("O nome do meu pet é Ayla")
   }
 )
+
+//Funções Construtoras
+function Person(name) {
+  this.name = name
+  this.walk = function() {
+    return this.name + " está andando"
+  }
+}
+const gabriel = new Person("Gabriel")
+const joao = new Person("João")
+
+console.log(gabriel.walk())
+console.log(joao.walk())
