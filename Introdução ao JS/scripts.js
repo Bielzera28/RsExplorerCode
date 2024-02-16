@@ -48,3 +48,10 @@ function createThink(subject) {
 
 console.log(subject)
 console.log(createThink(subject))
+
+//Function hoisting
+sayMyName()
+
+function sayMyName() {
+  console.log("Gabriel")
+}
