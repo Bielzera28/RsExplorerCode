@@ -38,3 +38,13 @@ function fazerSuco(fruta1, fruta2) {
 
 const copo = fazerSuco("banana", "maça")
 console.log(copo)
+
+//Function scope
+let subject = "create video"
+function createThink(subject) {
+  subject = "study"
+  return subject
+}
+
+console.log(subject)
+console.log(createThink(subject))
