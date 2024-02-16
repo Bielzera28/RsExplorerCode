@@ -63,3 +63,16 @@ const howOld = (number) => {
 }
 
 howOld(18)
+
+//Callback function - função como parametro para outra
+function myPet(pet) {
+  console.log("Antes da função callback")
+  pet()
+  console.log("Depois da callback")
+}
+
+myPet(
+  () => {
+    console.log("O nome do meu pet é Ayla")
+  }
+)
