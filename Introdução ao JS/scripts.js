@@ -55,3 +55,11 @@ sayMyName()
 function sayMyName() {
   console.log("Gabriel")
 }
+
+//Arrow Function
+//ao invés de const howOld = function() {} será:
+const howOld = (number) => {
+  console.log(number)
+}
+
+howOld(18)
