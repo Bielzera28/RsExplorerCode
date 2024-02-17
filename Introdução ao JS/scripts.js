@@ -19,3 +19,8 @@ console.log(String(number2).length)
 //Casas decimais
 let number3 = 1221.4141251345135
 console.log(number3.toFixed(2).replace(".",","))
+
+//Maiusculas e minusculas
+let phrase = "Programar é muito legal"
+console.log(phrase.toLowerCase())
+console.log(phrase.toUpperCase())                                         
