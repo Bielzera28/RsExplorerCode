@@ -23,4 +23,11 @@ console.log(number3.toFixed(2).replace(".",","))
 //Maiusculas e minusculas
 let phrase = "Programar é muito legal"
 console.log(phrase.toLowerCase())
-console.log(phrase.toUpperCase())                                         
+console.log(phrase.toUpperCase()) 
+
+//Separando strings
+let text = "Eu quero programar"
+let myArray = text.split(" ")
+console.log(myArray)
+let textWithUnderscore = myArray.join("_")
+console.log(textWithUnderscore.toLowerCase())
