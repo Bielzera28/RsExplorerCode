@@ -42,3 +42,11 @@ console.log(myArray2)
 
 let myArray3 = new Array(10)
 console.log(myArray3) // criando array vazia com 10 espaços
+
+//Contar elementos de um array
+console.log(["a", "b", "c"].length)
+console.log([
+  "a",
+  {type: "array"},
+  function() {return "alo"}
+][2]()) // mostra o que tem no espaço 2 e o () executa a função
