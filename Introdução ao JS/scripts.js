@@ -35,3 +35,10 @@ console.log(textWithUnderscore.toLowerCase())
 //Encontrando palavras em frases
 let hunt = "Eu quero viver!"
 console.log(hunt.includes("Amor"))
+
+//Criar array com constructor
+let myArray2 = new Array("a","b","c") // cria array com esses itens
+console.log(myArray2)
+
+let myArray3 = new Array(10)
+console.log(myArray3) // criando array vazia com 10 espaços
