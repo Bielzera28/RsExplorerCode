@@ -54,3 +54,17 @@ console.log([
 //String para arrays - cadeia de caracteres em elementos de array
 let palavra = "manipulação"
 console.log(Array.from(palavra))
+
+//Manipulando Arrays
+let techs = ["html", "css", "js"]
+techs.push("node.js") // adiciona ao final da array
+techs.unshift("react") // adiciona ao inicio da array
+// techs.pop()  remove ultimo elemento da array
+// techs.shift()  remove primeiro elemento da array
+// console.log(techs.slice(1, 3))  pega somente elementos dentro do parenteses
+// techs.splice(1,1) remove elemento a partir da posição 1, segunda numero seriam quantos itens serão removidos
+let index = techs.indexOf("css") // posição do elemento no array
+console.log(index) // retorna posição
+techs.splice(index,1) // remove elemento a partir do index (inclusive ele), e quantos elementos mais
+console.log(techs)
+
