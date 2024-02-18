@@ -31,3 +31,7 @@ let myArray = text.split(" ")
 console.log(myArray)
 let textWithUnderscore = myArray.join("_")
 console.log(textWithUnderscore.toLowerCase())
+
+//Encontrando palavras em frases
+let hunt = "Eu quero viver!"
+console.log(hunt.includes("Amor"))
