@@ -50,3 +50,7 @@ console.log([
   {type: "array"},
   function() {return "alo"}
 ][2]()) // mostra o que tem no espaço 2 e o () executa a função
+
+//String para arrays - cadeia de caracteres em elementos de array
+let palavra = "manipulação"
+console.log(Array.from(palavra))
