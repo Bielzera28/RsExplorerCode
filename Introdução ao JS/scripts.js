@@ -103,3 +103,7 @@
  console.log("a" + "a") // concatenação
  let conc = "uv"
  console.log(conc += "a")
+
+ //Falsy e Truthy
+ console.log(false ? "verdadeiro" : "falso")
+ console.log(true? "top" : "ruim")
