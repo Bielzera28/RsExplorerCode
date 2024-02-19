@@ -79,3 +79,13 @@
  console.log(x)
  x**=2 // exponential assignment
  console.log(x)
+
+ //Operadores lógicos
+ let pao = true
+ let queijo = true
+ //AND && - ambos tem que ser true , se não for , será false
+ console.log(pao && queijo)
+ //OR || - pelomenos um tem que ser true
+ console.log(pao || queijo)
+ //NOT !
+ console.log(!pao)
