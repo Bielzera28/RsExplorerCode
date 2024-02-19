@@ -22,3 +22,26 @@
  console.log(person)
  console.log(delete person.age)
  console.log(person)
+
+ //Operadores aritméticos
+ console.log(10*3) // multiplicação
+ console.log(30/3) // divisão
+ console.log(10+10) // soma
+ console.log(50-10) // subtração
+ 
+ let remainder = 11 % 3 // resto da divisão
+ console.log(remainder)
+
+ let increment = 1
+ ++increment 
+ increment++
+ console.log(increment++) //incremento após o retorno no console
+ console.log(++increment) //incremento antes do retorno no console
+
+ let decrement = 10
+ console.log(--decrement) //decremento antes do retorno no console
+ console.log(decrement--) // incremento após o retorno do console
+ console.log(decrement)
+
+ console.log(2**3) // exponencial
+
