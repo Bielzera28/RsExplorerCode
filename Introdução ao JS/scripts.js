@@ -63,3 +63,19 @@
  console.log(one < two) // menor que
  console.log(one >= two) // maior ou igual
  console.log(one <= two) // menor ou igual
+
+ //Operadores de atribuição (assignment)
+ x = 1
+ console.log(x)
+ x+=2 //addition assignment
+ console.log(x)
+ x-=2 //subtraction assignment
+ console.log(x)
+ x*=10 // multiplication assignmet
+ console.log(x)
+ x/=5 // divison assignment
+ console.log(x)
+ x%=2 // reminder assignment
+ console.log(x)
+ x**=2 // exponential assignment
+ console.log(x)
