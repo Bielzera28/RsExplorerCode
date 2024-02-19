@@ -97,3 +97,9 @@
  let age1 = 16
  const canDrive = age1 >= 18 ? "can drive" : "can't drive"
  console.log(canDrive)
+
+ //Operador de string
+ console.log("a" == "a") // comparação
+ console.log("a" + "a") // concatenação
+ let conc = "uv"
+ console.log(conc += "a")
