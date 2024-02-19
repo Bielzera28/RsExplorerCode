@@ -89,3 +89,11 @@
  console.log(pao || queijo)
  //NOT !
  console.log(!pao)
+
+ //Operador condicional ternário
+ const niceBreakfast = pao && queijo ? "Café top" : "Café ruim"
+ console.log(niceBreakfast)
+
+ let age1 = 16
+ const canDrive = age1 >= 18 ? "can drive" : "can't drive"
+ console.log(canDrive)
