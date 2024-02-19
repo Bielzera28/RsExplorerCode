@@ -48,3 +48,18 @@
  //Grouping operator
  let total = (2 + 3) * 5
  console.log(total)
+
+ //Operadores de comparação
+ let one = 1
+ let two = 2
+ console.log(two == 1)
+ console.log(one == "1") // igual a
+ console.log(one != 1)
+ console.log(one != two) //diferente de
+ console.log(one === "1")
+ console.log(one === 1) // estritamente igual em valor e tipo de dado
+ console.log(one !== two) // estritamente diferente
+ console.log(one > two) // maior que
+ console.log(one < two) // menor que
+ console.log(one >= two) // maior ou igual
+ console.log(one <= two) // menor ou igual
