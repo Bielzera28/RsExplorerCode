@@ -38,3 +38,19 @@ function calculate(number1, operator, number2) {
 }
 
 console.log(calculate(4, "*", 8))
+
+//Throw e try/catch
+function sayMyName (name = "") {
+  if (name === "") {
+    throw "Nome é obrigatório"
+  }
+  console.log("depois do erro")
+}
+
+try { //sem o try/catch , trava todo o código , se colocar , ele captura o erro e continua
+  sayMyName()
+} catch(e) {
+  console.log(e)
+}
+
+console.log("Após o erro")
