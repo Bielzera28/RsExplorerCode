@@ -7,7 +7,7 @@ for(let i = 10; i > 0; i--) {
   console.log(i)
 }
 
-//While
+//While - sem parada definida
 
 let n = 7000
 while(n > 10) {
@@ -16,7 +16,7 @@ while(n > 10) {
   
 }
 
-//For Of
+//For Of - String e Array
 
 let name = "Gabriel"
 let names = ["Asafe", "Ariane", "Romildo"]
@@ -26,3 +26,15 @@ for(let char of names) {
 
 }
 
+//For In - Objetos
+
+let person = {
+  name: "John",
+  age: 20,
+  weight: 90.2
+}
+
+for(let property in person) {
+
+  console.log(person[property])
+}
