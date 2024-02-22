@@ -16,4 +16,13 @@ while(n > 10) {
   
 }
 
+//For Of
+
+let name = "Gabriel"
+let names = ["Asafe", "Ariane", "Romildo"]
+
+for(let char of names) {
+  console.log(char)
+
+}
 
