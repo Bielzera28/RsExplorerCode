@@ -7,4 +7,13 @@ for(let i = 10; i > 0; i--) {
   console.log(i)
 }
 
+//While
+
+let n = 7000
+while(n > 10) {
+  console.log(n)
+  n /= 2;
+  
+}
+
 
