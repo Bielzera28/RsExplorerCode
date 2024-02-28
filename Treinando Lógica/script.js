@@ -10,7 +10,29 @@ while (option != 3) {
    3. Sair do programa
   `));
 
-  if (option == 1) {
+  // OPÇÃO SWITCH
+  switch(option) {
+    case 1:
+      let item = prompt("Digite o nome do item");
+      items.push(item)
+      break
+    case 2:
+      if (items.length === 0) {
+        alert("Não existem itens cadastrados");
+      } else {
+        alert(items);
+      }
+      break
+    case 3:
+      alert("Good Bye!");
+      break
+    default:
+      alert("Opção inválida, tente novamente.")
+
+  }
+
+  // OPÇÃO IF E ELSE
+/*  if (option == 1) {
     let item = prompt("Digite o nome do item");
     items.push(item)
   } else if (option == 2) {
@@ -21,5 +43,5 @@ while (option != 3) {
     }
   } else {
     alert("Good Bye!");
-  }
+  } */
 }
