@@ -1,29 +1,35 @@
-// Estruturando dados com objetos
+//Calculando IMC dos pacientes com funções
 const patients = [
   {
-    name: "Gabriel",
-    age: 22,
-    weight: 92.1,
-    height: 1.73
+    name: "Luiz",
+    age: 20,
+    weight: 100,
+    height: 190
   },
   {
-    name: "Ariane",
-    age: 26,
-    weight: 72.3,
-    height: 1.62
+    name: "Alexandra",
+    age: 27,
+    weight: 70,
+    height: 170
   },
   {
-    name: "Asafe",
-    age: 6,
-    weight: 32.6,
-    height: 1.21
-  }
+    name: "Carlos",
+    age: 42,
+    weight: 90,
+    height: 180
+  },
 ]
 
-let patientsNames = []
-
-for(let patient of patients) {
-  patientsNames.push(`${patient.name} possui ${patient.age} anos, pesa ${patient.weight} kilos e tem ${patient.height} metros de altura`)
+function imc(weight, height) {
+  return (weight / ((height / 100) ** 2)).toFixed(2)
 }
 
-alert(patientsNames)
+function printPatientIMC(patient) {
+  return `${patient.name} possui o IMC de : ${imc(patient.weight, patient.height)}`
+}
+
+for(let patient of patients) {
+  let IMCmessage = printPatientIMC(patient)
+  alert(IMCmessage)
+}
+
