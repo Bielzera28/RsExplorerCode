@@ -1,47 +1,29 @@
-//Interagindo com menu de opções - parte 1
-let option;
-let items = [];
-
-while (option != 3) {
-  option = Number(prompt(`
-   Olá usuário! Digite o número da opção desejada
-   1. Cadastrar um item  na lista
-   2. Mostrar itens cadastrados
-   3. Sair do programa
-  `));
-
-  // OPÇÃO SWITCH
-  switch(option) {
-    case 1:
-      let item = prompt("Digite o nome do item");
-      items.push(item)
-      break
-    case 2:
-      if (items.length === 0) {
-        alert("Não existem itens cadastrados");
-      } else {
-        alert(items);
-      }
-      break
-    case 3:
-      alert("Good Bye!");
-      break
-    default:
-      alert("Opção inválida, tente novamente.")
-
+// Estruturando dados com objetos
+const patients = [
+  {
+    name: "Gabriel",
+    age: 22,
+    weight: 92.1,
+    height: 1.73
+  },
+  {
+    name: "Ariane",
+    age: 26,
+    weight: 72.3,
+    height: 1.62
+  },
+  {
+    name: "Asafe",
+    age: 6,
+    weight: 32.6,
+    height: 1.21
   }
+]
 
-  // OPÇÃO IF E ELSE
-/*  if (option == 1) {
-    let item = prompt("Digite o nome do item");
-    items.push(item)
-  } else if (option == 2) {
-    if (items.length === 0) {
-      alert("Não existem itens cadastrados");
-    } else {
-      alert(items);
-    }
-  } else {
-    alert("Good Bye!");
-  } */
+let patientsNames = []
+
+for(let patient of patients) {
+  patientsNames.push(`${patient.name} possui ${patient.age} anos, pesa ${patient.weight} kilos e tem ${patient.height} metros de altura`)
 }
+
+alert(patientsNames)
