@@ -1,35 +1,30 @@
-//Calculando IMC dos pacientes com funções
-const patients = [
+//Exercicio 2
+const students = [
   {
-    name: "Luiz",
-    age: 20,
-    weight: 100,
-    height: 190
+    name: "Gabriel",
+    note1: 10,
+    note2: 7
   },
   {
-    name: "Alexandra",
-    age: 27,
-    weight: 70,
-    height: 170
+    name: "Asafe",
+    note1: 8,
+    note2: 5
   },
   {
-    name: "Carlos",
-    age: 42,
-    weight: 90,
-    height: 180
-  },
+    name: "Ariane",
+    note1: 9,
+    note2: 6
+  }
 ]
 
-function imc(weight, height) {
-  return (weight / ((height / 100) ** 2)).toFixed(2)
+function media(note1, note2) {
+  return (note1 + note2) / 2
 }
 
-function printPatientIMC(patient) {
-  return `${patient.name} possui o IMC de : ${imc(patient.weight, patient.height)}`
+for(let student of students) {
+  if(media(student.note1, student.note2) > 7) {
+    alert(`A média do(a) aluno(a) ${student.name} é: ${media(student.note1, student.note2)} \n Parabéns, ${student.name}! Você foi aprovado(a) no concurso! `)
+  } else {
+    alert(`A média do(a) aluno(a) ${student.name} é: ${media(student.note1, student.note2)} \n Não foi dessa vez, ${student.name}! Tente novamente! `)
+  }
 }
-
-for(let patient of patients) {
-  let IMCmessage = printPatientIMC(patient)
-  alert(IMCmessage)
-}
-
