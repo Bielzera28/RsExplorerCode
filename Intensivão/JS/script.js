@@ -44,3 +44,37 @@ if (typeof booleano === 'boolean') {
 } else {
   console.log("Não é um booleano")
 }
+
+// 6. Crie um script que declare duas variáveis e exiba o resultado da subtração entre elas.
+
+console.log(number2 - number1)
+
+// 7. Crie um script que declare duas variáveis e exiba o resultado da multiplicação entre elas.
+
+console.log(number1 * number2)
+
+// 8. Crie um script que declare duas variáveis e exiba o resultado da divisão entre elas.
+
+console.log(number2 / number1)
+
+// 9. Crie um script que declare uma variável e verifique se o seu valor é um número par. Se for, exiba a mensagem "É um número par", caso contrário, exiba a mensagem "Não é um número par".
+
+let number3 = 7
+let rest = number3 % 2
+
+if(rest == 0) {
+  console.log("É um número par")
+} else {
+  console.log("Não é um número par")
+}
+
+// 10. Crie um script que declare uma variável e verifique se o seu valor é um número ímpar. Se for, exiba a mensagem "É um número ímpar", caso contrário, exiba a mensagem "Não é um número ímpar".
+
+let number4 = 7
+let rest2 = number4 % 2
+
+if(rest2 != 0) {
+  console.log("É um número ímpar")
+} else {
+  console.log("Não é um número ímpar")
+}
