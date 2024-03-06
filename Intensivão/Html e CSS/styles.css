@@ -1,0 +1,82 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Mulish", sans-serif;
+}
+
+:root {
+  font-size: 62,5%;
+}
+
+.container {
+  max-width: 144rem;
+  padding: 0 auto;
+}
+
+header {
+  display: flex;
+  gap: 2.8rem; 
+  justify-content: center;
+  background-color: #F9F4FB;
+  padding-bottom: 7rem;
+}
+
+header h1 {
+  font-size: 3.8rem;
+  color: #B52184;
+  margin: .2rem 0;
+  text-shadow: 1px 3px 2px #B2A8BA;
+  padding-top: 19rem;
+}
+
+header h2 {
+  font-size: 1.9rem;
+  font-weight: 1000;
+  color: #312D64;
+  margin: 0;
+  text-shadow: 1px 3px 2px #B2A8BA;
+  padding-bottom: 10rem;
+}
+
+header .button-img {
+  border-top-left-radius: 1.8rem;
+  border-top-right-radius: 1.8rem;
+  border-bottom-left-radius: 1.8rem;
+  border-bottom-right-radius: 1.8rem;
+}
+
+header .button-img:hover {
+  background-color: #fff;
+  cursor: pointer;
+}
+
+main {
+  background-color: #312D64;
+  display: flex;
+  gap: 6rem;
+  justify-content: center;
+}
+
+main .main-card {
+  background-color: #FFF;
+  padding: 1.6rem;
+  margin: 4rem 0;
+  border-radius: .8rem;
+  width: 20rem;
+  height: 25rem;
+  box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+}
+
+.main-card h1 {
+  font-size: 2.2rem;
+  font-weight: 1000;
+  color: #B52184;
+  margin-bottom: 0.6rem;
+}
+
+.main-card span {
+  font-size: 1.2rem;
+  color: #312D64;
+  font-weight: bold;
+}
