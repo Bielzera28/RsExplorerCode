@@ -4,7 +4,7 @@ let attempts = 1;
 
 
 
-function handleClick(event){
+function handleTryClick(event){
   event.preventDefault()
   const inputNumber = document.querySelector("#inputNumber")
 
@@ -14,6 +14,17 @@ function handleClick(event){
 
     document.querySelector(".screen2 h2").innerText = `Você acertou em ${attempts} tentativas.`
   }
-
+  
+  inputNumber.value = ""
   attempts++
 }
+
+const btnTry = document.querySelector("#btnTry")
+const btnReset = document.querySelector("#btnReset")
+
+btnTry.addEventListener("click", handleTryClick)
+btnReset.addEventListener("click", function(){
+  document.querySelector(".screen1").classList.remove("hide")
+  document.querySelector(".screen2").classList.add("hide")
+  attempts = 1
+})
