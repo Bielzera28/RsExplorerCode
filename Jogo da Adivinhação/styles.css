@@ -55,18 +55,20 @@ h1 {
   margin-bottom: 1.6rem;
 }
 
-h1, p {
+h1, span {
   color: #34355B;
 }
 
-p {
+span {
   opacity: 0.8;
 }
 
 form {
   display: flex;
+  flex-direction: c;
   margin-top: 4.8rem;
   justify-content: center;
+  width: 100%;
 }
 
 input, button {
@@ -78,6 +80,13 @@ input {
   background-color: #DCE2E9;
   width: 6rem;
   border-radius: .4rem 0 0 .4rem;
+  width: 100%;
+}
+
+main p {
+  display: none; 
+  color: red;
+  margin-top: 2rem;
 }
 
 /* screen 2 */
