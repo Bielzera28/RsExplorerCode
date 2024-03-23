@@ -9,6 +9,13 @@ form.onsubmit = function(event) {
   const weight = inputWeight.value
   const height = inputHeight.value
 
+  const showAlertError = notNumber(weight) || notNumber(height)
+
+  if(showAlertError) {
+    console.log("mostrar o alerta de erro")
+    return 
+  }
+
   const result = imc(weight, height)
   const message = `Seu IMC é de ${result}`
   Modal.message.innerText = message
@@ -17,4 +24,8 @@ form.onsubmit = function(event) {
 
 function imc(weight, height) {
   return (weight / ((height / 100) ** 2)).toFixed(2)
+}
+
+function notNumber(value) {
+  return isNaN(value) || value == ""
 }
