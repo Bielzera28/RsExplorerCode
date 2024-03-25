@@ -6,11 +6,14 @@
   <title>Focus Timer</title>
   <link rel="stylesheet" href="style.css">
   <link rel="shortcut icon" href="./assets/favicon.svg" type="image/x-svg">
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
 </head>
 <body>
   <div class="app">
     <button class="toggle-mode">
       <span>Ativar/desativar light mode</span>
+      <i class="ph-bold ph-sun"></i>
+      <i class="ph-bold ph-moon"></i>
     </button>
     <section id="timer">
       <span id="minutes">00</span>
@@ -18,12 +21,12 @@
       <span class="seconds">00</span>
     </section>
     <section id="controls">
-      <button>Play</button>
-      <button>Pause</button>
-      <button>Set</button>
-      <button>Stop</button>
-      <button>MusicON</button>
-      <button>MusicOFF</button>
+      <button class="ph ph-play-circle"></button>
+      <button class="ph ph-pause-circle"></button>
+      <button class="ph ph-timer"></button>
+      <button class="ph ph-stop-circle"></button>
+      <button class="ph ph-speaker-none"></button>
+      <button class="ph ph-speaker-high"></button>
     </section>
   </div>
 </body>
