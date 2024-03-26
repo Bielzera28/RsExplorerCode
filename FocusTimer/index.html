@@ -4,23 +4,23 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Focus Timer</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="styles.css">
   <link rel="shortcut icon" href="./assets/favicon.svg" type="image/x-svg">
   <script src="https://unpkg.com/@phosphor-icons/web"></script>
 </head>
 <body>
-  <div class="app">
+  <div id="app">
     <button class="toggle-mode">
       <span>Ativar/desativar light mode</span>
       <i class="ph-bold ph-sun"></i>
       <i class="ph-bold ph-moon"></i>
     </button>
-    <section id="timer">
+    <section id="timer" class="flex">
       <span id="minutes">00</span>
       <span>:</span>
       <span class="seconds">00</span>
     </section>
-    <section id="controls">
+    <section id="controls" class="flex">
       <button class="ph ph-play-circle"></button>
       <button class="ph ph-pause-circle"></button>
       <button class="ph ph-timer"></button>
