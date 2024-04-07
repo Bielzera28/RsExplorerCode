@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>SPA</title>
 </head>
+
 <body>
   <nav>
     <a href="/" onclick="route()">Home</a>
@@ -34,9 +36,15 @@
     }
 
     function handle() {
-      const {pathname} = window.location
-      console.log(pathname)
+      const { pathname } = window.location
+      const route = routes[pathname] || routes[404]
+      fetch(route)
+      .then((data) => data.text())
+      .then(html => console.log(html))
+
+      console.log(route)
     }
   </script>
 </body>
+
 </html>
