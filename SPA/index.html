@@ -17,7 +17,7 @@
 
   <div id="app"></div>
 
-  <script>
+  <script src="js/index.js" type="module">
 
     const routes = {
       "/": "/pages/home.html",
@@ -40,10 +40,13 @@
       const route = routes[pathname] || routes[404]
       fetch(route)
       .then((data) => data.text())
-      .then(html => console.log(html))
-
-      console.log(route)
+      .then(html => {
+        document.querySelector("#app").innerHTML = html
+      })
     }
+
+    handle()
+    window.onpopstate = () => handle()
   </script>
 </body>
 
