@@ -83,6 +83,7 @@ header h1 {
 table {
   width: 100%;
   border-collapse: collapse;
+  box-shadow: 0 1rem 2rem -1rem rgba(0, 0, 0, 0.3);
 }
 
 table * {
@@ -112,9 +113,24 @@ table tr:nth-child(odd) {
 table tr:nth-child(even) {
   background: #EEE;
 }
+
 table td {
   padding: 1.5rem;
   text-align: left;
+}
+
+.user {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.user a {
+  text-decoration: none;
+}
+
+.user a p {
+  font-weight: bold;
 }
 
 .user img {
@@ -123,4 +139,10 @@ table td {
   object-fit: cover;
   border-radius: 50%;
 
+}
+
+.remove {
+  background: none;
+  border: none;
+  color: red;
 }
