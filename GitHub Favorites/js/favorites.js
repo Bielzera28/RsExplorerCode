@@ -21,6 +21,11 @@ export class Favorites {
       },
     ];
   }
+  delete(user) {
+    const filteredEntries = this.entries.filter((entry) =>{
+      entry.login !== user.login
+    })
+  }
 }
 
 // classe que vai criar visualização e eventos do html
@@ -40,10 +45,17 @@ export class FavoritesView extends Favorites {
       row.querySelector(".user img").src = `https://github.com/${user.login}.png`
       row.querySelector(".user img").alt = `Imagem de ${user.name}`
       row.querySelector(".user p").textContent = user.name
-      this.tbody.append(row)
       row.querySelector(".user span").textContent = user.login
       row.querySelector(".repositories").textContent = user.public_repos
       row.querySelector(".followers").textContent = user.followers
+      row.querySelector(".remove").onclick = () => {
+        const isOk = confirm("Tem certeza que deseja deletar essa linha?")
+        if(isOk) {
+          this.delete(user)
+        }
+      }
+
+      this.tbody.append(row)
     })
   }
 
@@ -56,11 +68,11 @@ export class FavoritesView extends Favorites {
     <p>Gabriel</p>
     <span>bielzera28</span>
     </a>
-     </td>
-     <td class="repositories">76</td>
-     <td class="followers">9589</td>
-     <td>
-      <button class="remove">&times;</button>
+    </td>
+    <td class="repositories">76</td>
+    <td class="followers">9589</td>
+    <td>
+    <button class="remove">&times;</button>
     </td>
     `;
 
