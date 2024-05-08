@@ -1,3 +1,18 @@
+export class GithubUser {
+  static search(username) {
+    const endpoint = `https://api.github.com/users/${username}`
+
+    return fetch(endpoint)
+    .then(data => data.json())
+    .then(({ login, name, public_repos, followers }) => ({
+      login,
+      name,
+      public_repos,
+      followers
+    }))
+  }
+}
+
 // classe com logica dos dados e como serão estruturados
 export class Favorites {
   constructor(root) {
@@ -51,18 +66,22 @@ export class FavoritesView extends Favorites {
     const tr = document.createElement("tr");
     tr.innerHTML = `
     <td class="user">
-    <img src="https://github.com/bielzera28.png" alt="Imagem de Gabriel Aguiar">
-    <a href="https://github.com/bielzera28" target="_blank">
-    <p>Gabriel</p>
-    <span>bielzera28</span>
-    </a>
-    </td>
-    <td class="repositories">76</td>
-    <td class="followers">9589</td>
-    <td>
-    <button class="remove">&times;</button>
-    </td>
-    `;
+        <img src="https://github.com/bielzera28.png" alt="Imagem de Gabriel">
+        <a href="https://github.com/bielzera28" target="_blank">
+          <p>Gabriel Aguiar</p>
+          <span>bielzera28</span>
+        </a>
+      </td>
+      <td class="repositories">
+        12
+      </td>
+      <td class="followers">
+        1
+      </td>
+      <td>
+        <button class="remove">&times;</button>
+      </td>
+    `
 
     return tr;
   }
