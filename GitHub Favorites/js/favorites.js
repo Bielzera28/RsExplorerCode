@@ -24,9 +24,25 @@ export class Favorites {
    this.entries = JSON.parse(localStorage.getItem("@github-favorites:")) || []
   }
 
+  save() {
+    localStorage.setItem("@github-favorites:", JSON.stringify(this.entries))
+  }
+
   async add(username) {
-    const user = await GithubUser.search(username)
-    console.log(user)
+    try {
+      const user = await GithubUser.search(username)
+      if(user.login === undefined) {
+        throw new Error("Usuário não encontrado!")
+      }
+
+      this.entries = [user, ...this.entries]
+      this.update()
+      this.save()
+
+    } catch(error) {
+      alert(error.message)
+    }
+    
 
   }
 
@@ -36,6 +52,7 @@ export class Favorites {
       entry.login !== user.login})
     this.entries = filteredEntries
     this.update()
+    this.save()
   }
 }
 
